@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Crowdfunding product page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="product-page">
+    <div class="nav">
+<nav>
+  <img src="images/logo.svg" alt="">
+  <ul>
+    <li class="item">About</li>
+    <li  class="item"> Discover</li>
+    <li  class="item">Get Started</li>
+  </ul>
+</nav>
+    </div>
+    <div class="intro">
+      <img class="logo" src="images/logo-mastercraft.svg" alt="">
+<h1 class="title"> Mastercraft Bamboo Monitor Riser</h1>
+<p class="p">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
+<div class="btns">
+  <button id="backing" class="project"> Back this project</button>
+  <button id="bookmark" class="bookmark"><img class="mark" src="images/icon-bookmark.svg" alt=""> Bookmark</button>
+</div>
+    </div>
+    <div class="stat-card">
+    <div class="stats">
+      <div class="usd">
+        <h1 class="h1-stat">$89,914</h1>
+        <p class="p-stat">of $100,000 backed</p>
+      </div>
+      <div class="total">
+      <h1 class="h1-stat"> 5,007</h1>
+      <p class="p-stat"> total backers</p>
+    </div>
+      <div class="day-left">
+        <h1 class="h1-stat">56</h1>
+        <p class="p-stat">days left</p>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <div class="completed"></div>
+    </div>
+    </div>
+    <div class="about">
+      <h1 class="h1-about">About this project</h1>
+      <p class="p-about"> The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen 
+        to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve 
+        your posture and make you more comfortable while at work, helping you stay focused on the task at hand.
+      <br><br>
+        Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer 
+        to allow notepads, pens, and USB sticks to be stored under the stand.</p>
+        <div class="stands">
+          <div class="pledge">
+          <h1 class="h1-about">Bamboo Stand</h1>
+          <a class="link-about" href=""> Pledge $25 or more</a>
+        </div>
+        <p class="p-about"> You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
+          you’ll be added to a special Backer member list.</p>
+          <div class="time">
+            <p class="p-about"><span class="span"> 101</span> left</p>
+            <button class="reward"> Select Reward</button>
+          </div>
+        </div>
+        <div class="stands">
+          <div class="pledge">
+          <h1 class="h1-about">Black Edition Stand</h1>
+          <a class="link-about" href="">Pledge $75 or more</a>
+        </div>
+        <p class="p-about">You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
+          member list. Shipping is included.</p>
+          <div class="time">
+            <p class="p-about"><span class="span"> 64 </span> left</p>
+            <button class="reward"> Select Reward</button>
+          </div>
+        </div>
+        <div class="out-of-stock-stand">
+          <div class="pledge">
+          <h1 class="h1-about"> Mahogany Special Edition</h1>
+          <a class="link-about" href="">Pledge $200 or more</a>
+        </div>
+        <p class="p-about"> You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
+          to our Backer member list. Shipping is included.</p>
+          <div class="time">
+            <p class="p-about"><span class="span">  0  </span> left</p>
+            <button  class="out-of-stock-btn" disabled>Out of Stock </button>
+          </div>
+        </div>
+    </div>
+   <div id="model" class="model">
+    <img class="close-model" id="close-model" src="images/icon-close-modal.svg" alt="" onclick="closeModel()">
+    <h1 class="h1-about">Back this project</h1>
+    <p class="p-about">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+    <div id="stand-no-reward" class="stand-no-reward">
+        <input id="no-reward" class="input" type="radio" name="choose pledge" onclick="radioClick()">
+        <label class="label" for="no-reward">Pledge with no reward</label>
+    <p class="p-about"> Choose to support us without a reward if you simply believe in our project. As a backer, 
+      you will be signed up to receive product updates via email.
+    </p>
+    </div>
+    <div id="bambostand" class="bambo-stand">
+      <input id="bamboo" class="input" type="radio" name="choose pledge" onclick="radioClick()">
+      <label class="label" for="bamboo"> Bamboo Stand</label>
+      <label for="bamboo"> <a class="link-about" href="">Pledge $25 or more</a></label>
+      <label class="p-label" for="bamboo"><span class="span"> 101</span> left</label>
+  <p class="p-about"> You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
+    you’ll be added to a special Backer member list.
+  </p>
+    <div id="ep1" class="enter-pledge">
+      <div class="p11">
+      <p class="p-about">Enter your pledge</p>
+    </div>
+    <div class="form">
+      <input id="input" class="input-us"  type="text" maxlength="5">
+      <label class="us-1" for="input">$</label>
+      <button class="continue" id="bamboo-continue">Continue</button>
+    </div>
+    </div>
+  </div>
+
+  <div id="blackstand" class="black-stand">
+    <input id="black" class="input" type="radio" name="choose pledge" onclick="radioClick()">
+    <label class="label" for="black">Black Edition Stand</label>
+    <label for="black"> <a class="link-about" href="">Pledge $75 or more</a></label>
+    <label class="p-label1" for="black"><span class="span">64</span> left</label>
+<p class="p-about"> You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+  member list. Shipping is included.
+</p>
+  <div id="ep2" class="enter-pledge2">
+    <div class="p11">
+    <p class="p-about">Enter your pledge</p>
+  </div>
+  <div class="form">
+    <input id="input1" class="input-us"  type="text" maxlength="5">
+    <label class="us-2" for="input">$</label>
+    <button  class="continue" id="black-continue">Continue</button>
+  </div>
+  </div>
+</div>
+<div id="mahoganystand" class="mahogany-stand">
+  <input id="black" class="input" type="radio" name="choose pledge" disabled>
+  <label class="label" for="black">Mahogany Special Edition</label>
+  <label for="black"> <a class="link-about" href="">Pledge $200 or more</a></label>
+  <label class="p-label2" for="black"><span class="span"> 0 </span> left</label>
+<p class="p-about"> You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+  to our Backer member list. Shipping is included.
+</p>
+</div>
+   </div>
+   <div  id="complete1" class="complete">
+  <img class="check" src="images/icon-check.svg" alt="">
+  <h1 class="h1-end-model"> Thanks for your support!</h1>
+  <p class="p-end-model"> Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+    an email once our campaign is completed.</p>
+    <button id="got-it" class="got-it"> Got it!</button>
+  </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
